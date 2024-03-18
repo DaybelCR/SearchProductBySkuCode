@@ -3,5 +3,31 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  box-sizing: border-box;
+  flex: 1;
 }
 
+.button{
+  background-color: #FF6E00;
+  color: #fff;
+  border-radius: 22px;
+  border: none;
+  margin-left: 10px;
+}
+
+.button:hover{
+  box-shadow: 0 2px 2px #C84F29;
+}
+
+.container-main{
+  padding-top: 3rem;
+}
+
+.pdp-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.pdp-top{
+  display: flex;
+}

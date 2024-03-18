@@ -1,9 +1,16 @@
-import {useContext } from "react"
+import { useContext } from "react"
 import ProductContext from "../../ProductContext"
+import ProductCard from "./ProductCard"
+import "./styles.css"
+
 export default function SearchResult() {
- const {product, queryProduct}=useContext(ProductContext)
- console.log(product,'resultado: producto')
-  return (
-    <div></div>
-  )
+    const { product } = useContext(ProductContext)
+  
+    return (
+        <section className="container-results">
+            {(!product) ? <p>No se encontraron resultados</p> :
+                <ProductCard productData={product} />
+            }
+        </section>
+    )
 }

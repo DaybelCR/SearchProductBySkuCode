@@ -1,0 +1,48 @@
+/* .container-results{
+    background-color: gray;
+} */
+.container-card {
+    padding: 20px;
+    box-shadow: 0 0 3.56px rgba(0, 0, 0, .22);
+    transition: all .5s ease;;
+    max-width: 250px;
+    margin: 25px auto;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.title-card {
+    font-size: 16px;
+    text-align: left;
+}
+
+.container-brand {
+    display: flex;
+    color: rgba(0, 0, 0, .7);
+    font-size: 14px;
+    justify-content: space-between;
+}
+
+.container-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-price .price-card{
+    color: #1e1e1e;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.link{
+    color: #fff;
+}
+.link:hover{
+    color: #fff;
+}
+
+.container-categories{
+    color: rgba(0, 0, 0, .7);
+    font-size: 14px;
+    text-align: left;
+}

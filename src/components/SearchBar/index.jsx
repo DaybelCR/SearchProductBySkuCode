@@ -1,5 +1,6 @@
 import { useState , useContext } from "react"
 import ProductContext from "../../ProductContext"
+import "./styles.css"
 
 
 export default function SearchBar() {
@@ -14,10 +15,10 @@ export default function SearchBar() {
 console.log('producto desde searchbar',product)
 
   return (
-    <nav className="flex">
+    <nav className="container-searchBar">
       <input type="text" name="skuCode" placeholder="Escribe el código de sku" value={skuCodeInput} onChange={(e) => setSkuCodeInput(e.target.value)} />
-      <button onClick={onSearchProduct}>
-        Consultar
+      <button className="button" onClick={onSearchProduct}>
+        Buscar
       </button>
     </nav>
   )
