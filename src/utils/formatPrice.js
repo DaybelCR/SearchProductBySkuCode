@@ -3,9 +3,9 @@ const formatPrice = (price) => {
     style: "currency",
     currency: "PEN",
     minimumFractionDigits: price % 1 === 0 ? 0 : 2,
-  };
-  const formatSoles = new Intl.NumberFormat("es-PE", options).format(price);
-  return formatSoles;
-};
+  }
+  const formatSoles = new Intl.NumberFormat("es-PE", options).format(price)
+  return formatSoles
+}
 
-export default formatPrice;
+export default formatPrice

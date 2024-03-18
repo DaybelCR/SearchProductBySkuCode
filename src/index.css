@@ -43,9 +43,15 @@ button {
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
+
+  a {
+    color: #000;
   }
+
+  a:hover {
+    color: #FF6E00;
+  }
+
   button {
     background-color: #f9f9f9;
   }

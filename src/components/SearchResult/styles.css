@@ -4,16 +4,16 @@
 .container-card {
     padding: 20px;
     box-shadow: 0 0 3.56px rgba(0, 0, 0, .22);
-    transition: all .5s ease;;
+    transition: all .5s ease;
+    ;
     max-width: 250px;
     margin: 25px auto;
     border-radius: 5px;
     background-color: #fff;
 }
 
-.title-card {
+.container-card h3 {
     font-size: 16px;
-    text-align: left;
 }
 
 .container-brand {
@@ -28,21 +28,22 @@
     justify-content: space-between;
     align-items: center;
 }
-.container-price .price-card{
+
+.container-price .price-card {
     color: #1e1e1e;
     font-weight: 600;
     font-size: 19px;
 }
 
-.link{
-    color: #fff;
-}
-.link:hover{
+.link {
     color: #fff;
 }
 
-.container-categories{
+.link:hover {
+    color: #fff;
+}
+
+.container-categories {
     color: rgba(0, 0, 0, .7);
     font-size: 14px;
-    text-align: left;
 }

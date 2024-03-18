@@ -1,8 +1,9 @@
-import "./App.css"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { lazy, Suspense } from 'react'
+import Loader from "./components/Loader"
 import Home from "./pages/index"
-import ProductDetailPage from "./pages/ProductDetailPage"
-
+const ProductDetailPage = lazy(() => import("./pages/ProductDetailPage"))
+import "./App.css"
 
 function App() {
 
@@ -12,7 +13,11 @@ function App() {
       <Router>
         <Routes>
           <Route exact path='/' element={<Home />} />
-          <Route exact path='/product/:skuCode' element={<ProductDetailPage />} />
+          <Route exact path='/product/:skuCode' element={
+            <Suspense fallback={<Loader />}>
+              <ProductDetailPage />
+            </Suspense>
+          } />
         </Routes>
       </Router>
     </div>
