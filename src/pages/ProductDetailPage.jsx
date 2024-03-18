@@ -5,11 +5,11 @@ import Loader from "../components/Loader"
 import { useParams, Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 import fetchProduct from "../utils/fetchProduct"
+import formatDataProduct from "../utils/formatDataProduct"
 
 export default function ProductDetailPage() {
   const [productData, setProductData] = useState(null)
-
-  const categories = productData?.categories[0].slice(1).slice(0, -1)
+  const formatData = formatDataProduct(productData)
   let { skuCode } = useParams()
 
   useEffect(() => {
@@ -20,12 +20,12 @@ export default function ProductDetailPage() {
     <div className="pdp-container">
       {
         productData ? (<>
-          <p className="container-categories"><Link to="/">Home</Link>/{categories}</p>
+          <p className="container-categories"><Link to="/">Home</Link>/{formatData.categories}</p>
           <div className="pdp-top">
-            <LeftContainer productData={productData} />
-            <RightContainer productData={productData} />
+            <LeftContainer productData={formatData} />
+            <RightContainer productData={formatData} />
           </div>
-          <BottomContainer productData={productData} /></>) : (<Loader />)
+          <BottomContainer productData={formatData} /></>) : (<Loader />)
       }
     </div>
   )

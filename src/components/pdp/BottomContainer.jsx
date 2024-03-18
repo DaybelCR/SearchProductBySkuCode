@@ -2,20 +2,13 @@ import React from "react"
 import parse from "html-react-parser"
 
 export default function BottomContainer({ productData }) {
-    let arrayDataSheet
-    if (productData && productData["Ficha Técnica"]) {
-        let dataSheet = productData["Ficha Técnica"]
-        arrayDataSheet = dataSheet.map(prop => {
-            return { [prop]: productData[prop][0] }
-        })
-    }
-    const htmlString = (productData?.DescriptionBrand) ? productData?.DescriptionBrand[0] : ''
-    const htmlElement = parse(htmlString)
+    const {descriptionBrand,dataSheet}=productData
+    const htmlElement = parse(descriptionBrand)
 
     return (
         <div className="bottom-container">
             {
-                htmlString !== "" ?
+                descriptionBrand !== "" ?
                     <table className="bottom-container-table">
                         <thead>
                             <tr>
@@ -41,7 +34,7 @@ export default function BottomContainer({ productData }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {arrayDataSheet && arrayDataSheet.map((obj, index) => (<tr key={index}>{
+                    {dataSheet && dataSheet.map((obj, index) => (<tr key={index}>{
                         Object.entries(obj).map(([prop, val]) => (<React.Fragment key={prop}><td style={{ fontWeight: "500" }}>{prop}</td><td>{val}</td></React.Fragment>))
                     }</tr>))}
                 </tbody>

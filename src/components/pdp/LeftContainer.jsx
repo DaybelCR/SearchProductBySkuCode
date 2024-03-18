@@ -1,10 +1,9 @@
 export default function LeftContainer({ productData }) {
-
-    const linkImage = productData?.items[0]?.images[0]?.imageUrl
-
+    const {urlImage}=productData
+   
     return (
         <div className="left-container">
-            <img src={linkImage} width="800" />
+            <img src={urlImage} width="800" />
         </div>
     )
 }
